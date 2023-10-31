@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --orange: #f7ab0a;
+  --orange-light: #f5c77e;
+  --gray: #6c757d;
+  --subtle-gray: #e8e9eb;
+  --gray-dark: #343a40;
+  --gray-light: rgba(48, 55, 61, 0.8);
+  --white: #f8f9fa;
+}
+
+body {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  transition: all 0.8s ease;
+}
+
+/* ----------------------------------------------- GENERAL----------------------------------------------- */
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-dark);
+}
+
+.papareact,
+.diffText:hover {
+  color: var(--orange);
+}
+
+.diffText {
+  border-bottom: 2px solid var(--orange);
+}
+
+.inner {
+  margin: 4px 0;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+/* ----------------------------------------------- Header ----------------------------------------------- */
+
+.header {
+  width: 100%;
+  display: inline-flex;
+  padding: 16px 32px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gray-dark);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px 16px 16px;
+  background-color: var(--subtle-gray);
+  color: var(--gray-dark);
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  vertical-align: text-bottom;
+}
+
+#title {
+  letter-spacing: 8px;
+}
+
+/* ----------------------------------------------- FORM ----------------------------------------------- */
+
+form {
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+fieldset {
+  margin: 18px 22px;
+  padding: 0 28px;
+  padding-bottom: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+}
+
+label[for="snack"],
+label[for="drink"],
+fieldset h4 {
+  display: flex;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: var(--gray);
+}
+
+fieldset label {
+  padding-bottom: 6px;
+  color: var(--gray-light);
+  font-weight: 600;
+  line-height: 28px;
+}
+
+fieldset legend {
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  position: relative;
+  top: 2px;
+  margin-right: 8px;
+}
+
+input[type="radio"]:hover,
+input[type="checkbox"]:hover {
+  border: 6px solid var(--orange-light);
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+  border: 6px solid var(--orange);
+}
+
+label[for="name"] {
+  margin-top: 12px;
+}
+
+/* ------------------------------------------- ORDER INFORMATION ------------------------------------------- */
+
+#name-cont {
+  width: 300px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  position: relative;
+  padding-top: 32px;
+}
+
+input[id="name"] {
+  width: 100%;
+  outline: 0;
+  border: none;
+  border-bottom: 2px solid var(--gray);
+  padding: 10px 0;
+  background: transparent;
+  font-size: 18px;
+  color: var(--gray-light);
+  transition: 0.3s ease !important;
+}
+
+input[id="name"]::placeholder {
+  color: transparent;
+}
+
+input[id="name"]:placeholder-shown ~ label[for="name"] {
+  font-size: 16px;
+  top: 20px;
+  letter-spacing: 1px;
+}
+
+input[id="name"]:focus {
+  border-image: linear-gradient(to right, var(--orange), #c36b00);
+  border-image-slice: 1;
+}
+
+input[id="name"]:focus ~ label[for="name"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  color: var(--orange);
+}
+
+label[for="name"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  color: var(--gray);
+  text-transform: uppercase;
+  transition: 0.3s ease !important;
+}
+
+/* ------------------------------------------- SANDWICH section ------------------------------------------- */
+
+#sandwich-wrapper {
+  width: 100%;
+  padding-top: 16px;
+}
+
+.s-inner {
+  margin: 6px 16px;
+  padding: 10px 22px 22px 28px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--subtle-gray);
+  border: 1px solid var(--subtle-gray);
+}
+
+.s-inner:hover {
+  border: 1px solid var(--orange);
+}
+
+/* ----------------------------------------------- DRINKS ----------------------------------------------- */
+
+/* ------------------------------------------ CUSTOM SELECTOR ------------------------------------------ */
+
+#custom-select {
+  min-width: 280px;
+  position: relative;
+}
+
+#custom-select:before,
+#custom-select:after {
+  pointer-events: none;
+  position: absolute;
+  right: 16px;
+  font-size: 12px;
+}
+
+#custom-select:before {
+  content: "▼";
+  top: 44%;
+  color: var(--orange) !important;
+}
+
+#custom-select:after {
+  content: "▲";
+  top: 12%;
+  color: var(--orange) !important;
+}
+
+/* ----------------------------------------------- SELECTOR ----------------------------------------------- */
+
+select {
+  appearance: none;
+  width: 100%;
+  padding: 12px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  color: var(--gray-dark);
+  font-size: 14px;
+  letter-spacing: 1px;
+  overflow-y: auto;
+}
+
+select:focus {
+  outline: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+select optgroup {
+  font-size: 15px;
+}
+
+select option {
+  background-color: var(--subtle-gray);
+  font-size: 14px;
+}
+
+select option[disabled]:hover {
+  background-color: var(--subtle-gray);
+}
+
+option:hover,
+option:checked {
+  background-color: var(--orange-light);
+}
+
+#select-drink {
+  background-color: var(--subtle-gray);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ----------------------------------------------- BUTTON ----------------------------------------------- */
+
+button {
+  margin: 10px auto;
+  width: 300px;
+  padding: 18px;
+  align-id: center;
+  background-color: var(--orange);
+  outline: 0;
+  border: 0;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+button:hover {
+  opacity: 1;
+}

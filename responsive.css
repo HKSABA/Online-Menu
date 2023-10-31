@@ -1,0 +1,98 @@
+/* --------------------------------------------- RESPONSIVE --------------------------------------------- */
+
+/* Header specific */
+
+@media only screen and (max-width: 570px) {
+  .header {
+    height: 100px;
+    padding: 12px 18px;
+  }
+  .header #title {
+    width: 100px;
+    font-size: 12px;
+  }
+  .header h5 {
+    width: 60px;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 16px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 570px) and (max-width: 720px) {
+  .header #title {
+    width: 200px;
+    font-size: 14px;
+  }
+  .header h5 {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 830px) {
+  .header {
+    height: 72px;
+    padding: 16px 20px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 830px) {
+  #title {
+    line-height: 24px;
+    letter-spacing: 6px;
+    word-spacing: 2px;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    padding: 12px 20px;
+    padding-bottom: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+/* Others */
+
+@media only screen and (max-width: 600px) {
+  form {
+    margin: 18px;
+    margin-bottom: 20px;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+  }
+
+  fieldset {
+    margin: 12px auto;
+    min-width: 260px;
+  }
+
+  #name-cont {
+    width: 100%;
+  }
+
+  #sandwich-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .s-inner div {
+    display: inline-flex;
+    align-items: flex-start;
+  }
+
+  .s-inner label {
+    display: inline-flex;
+    flex: 1;
+  }
+
+  .s-inner input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    top: 8px;
+  }
+}

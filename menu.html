@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="responsive.css">
+
+    <title>Papreact Online Menu</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <!-- left panel -- days open -->
+      <h5>
+        <span class="papareact"> MON </span>
+        <span>&mdash;</span>
+        <span class="papareact"> FRI </span 
+      </h5>
+
+      <!-- Title -->
+      <h5 id="title">
+        <span class="papareact">Papareact</span>
+        Lunch Special
+      </h5>
+
+      <!-- right panel -- time open -->
+      <h5>
+        <span class="papareact">11 AM</span>
+        <span>~</span>
+        <span class="papareact">3 PM</span> 
+      </h5>
+    </div>
+
+    <!-- Information -->
+    <div class="subtitle">
+      <h4>
+        Includes
+        <a class="diffText" href="#sandwich"> sandwich </a>,
+        <a class="diffText" href="#snack"> snack </a>, and
+        <a class="diffText" href="#drink"> drink </a>
+        for 
+        
+        <span style="font-size: 20px;" class="papareact">
+          $9.95
+        </span>
+        
+        <span style="font-size: 12px; color: var(--gray-light)">
+          (plus tax)
+        </span>
+      </h4>
+      
+    </div>
+
+    <form>
+      <fieldset style="height: 160px;"
+      >
+        <!-- Order Information -->
+        <legend>Order Information</legend>
+
+        <div id="name-cont">
+          <input autocomplete="off" name="name" id="name" type="text" placeholder="Enter Name" />
+          <label for="name">Enter Name</labe>
+        </div>
+        
+
+        <div style="width: 100%; display: inline-flex; justify-content: space-evenly; margin: 8px 0;">
+          <div>
+            <input type="radio" name="order" />
+            <label for="order">Here</label>
+          </div>
+
+          <div>
+            <input type="radio" name="order" />
+            <label for="order">To Go</label>
+          </div>
+        </div>
+      </fieldset>
+
+
+
+      <!-- Snack -->
+      <fieldset style="height: 160px;" id="snack">
+        <legend>Snack</legend>
+
+        <label for="snack">Snacks</label>
+
+        <div class="inner">
+          <input type="radio" name="snack" id="apple" value="apple" />
+          <label for="apple">Apple</label>
+        </div>
+
+        <div class="inner">
+          <input type="radio" name="snack" id="banana" value="banana" />
+          <label for="banana">Banana</label>
+        </div>
+
+        <div class="inner">
+          <input type="radio" name="snack" id="chips" value="chips" />
+          <label for="chips">Potato Chips</label>
+        </div>
+      </fieldset>
+      
+      
+      
+      <!-- Drinks -->
+      <fieldset style="height: 172px;" id="drink">
+        <legend for="drink">Drink</legend>
+
+        <div>
+          <label for="drink">Drinks</label>
+
+          <div id="custom-select">
+            <select 
+            onfocus="this.size=26;" onblur="this.size=0;" onchange="this.size=1; this.blur()" 
+            name="drink" id="drink">
+              <option disabled value=""></option>
+              <!-- select a drink -->
+              <option id="select-drink"  selected value="">Select a Drink</option>
+              <option disabled value=""></option>
+              
+              <option value="peppermint">Organic Peppermint</option>
+              <option disabled value=""></option>
+              
+              <optgroup label="Green Tea">
+                <option disabled value=""></option>
+                <option value="hot-sencha">Hot Green Tea - Sencha</option>
+                <option disabled value=""></option>
+                <option value="iced-sencha">Iced Green Tea - Sencha</option>
+                <option disabled value=""></option>
+              </optgroup>
+
+              <optgroup label="Black Tea">
+                <option disabled value=""></option>
+                <option value="hot-keemun">Hot Black Tea - Keemun</option>
+                <option disabled value=""></option>
+                <option value="iced-keemun">Iced Black Tea - Keemun</option>
+                <option disabled value=""></option>
+              </optgroup>
+
+              <optgroup label="Coffee">
+                <option disabled value=""></option>
+                <option value="hot-coffee">Hot Coffee</option>
+                <option disabled value=""></option>
+                <option value="iced-coffee">Iced Coffee</option>
+                <option disabled value=""></option>
+              </optgroup>
+
+              <optgroup label="Bubble Tea ($1.50 extra)">
+                <option disabled value=""></option>
+                <option value="bubble-tea">Bubble Tea</option>
+                <option disabled value=""></option>
+              </optgroup>
+            </select>
+          </div>
+
+          <hr />
+
+          <input type="checkbox" name="drink" id="Ldrink" />
+
+          <label for="Ldrink"
+            >Large Drink
+            <span style="font-weight: bold; margin-left: 8px"
+              >(75&cent; extra)</span
+            >
+          </label>
+        </div>
+      </fieldset>
+
+
+
+      <!-- Sandwich -->
+      <fieldset id="sandwich">
+        <legend>Sandwiches</legend>
+
+        <!-- all sandwich categories -->
+        <div id="sandwich-wrapper">
+          <label for="sandwich"></label>
+
+          <!-- Monday special -->
+          <div class="s-inner">
+            <h4>Monday</h4>
+            <div>
+              <input type="radio" name="sandwich" id="tm" value="tm" />
+              <label for="tm">Tomato Mozzarella</label>
+            </div>
+            <div>
+              <input type="radio" name="sandwich" id="cs" value="cs" />
+              <label for="cs">Chicken Salad</label>
+            </div>
+          </div>
+
+          <!-- Tuesday special -->
+          <div class="s-inner">
+            <h4>Tuesday</h4>
+            <div>
+              <input type="radio" name="sandwich" id="gs" value="gs" />
+              <label for="gs">Greek Salad Wrap</label>
+            </div>
+            <div>
+              <input type="radio" name="sandwich" id="tw" value="tw" />
+              <label for="tw">Toto Wrap</label>
+            </div>
+          </div>
+
+          <!-- Wednesday special -->
+          <div class="s-inner">
+            <h4>Wednesday</h4>
+            <div>
+              <input type="radio" name="sandwich" id="rph" value="rph" />
+              <label for="rph">Red Pepper Hummus</label>
+            </div>
+            <div>
+              <input type="radio" name="sandwich" id="rt" value="rt" />
+              <label for="rt">Roasted Turkey</label>
+            </div>
+          </div>
+
+          <!-- Thursday special -->
+          <div class="s-inner">
+            <h4>Thursday</h4>
+            <div>
+              <input type="radio" name="sandwich" id="cghw" value="cghw" />
+              <label for="cghw">Carrot-Ginger Hummus Wrap</label>
+            </div>
+            <div>
+              <input type="radio" name="sandwich" id="es" value="es" />
+              <label for="es">Egg Salad</label>
+            </div>
+          </div>
+
+          <!-- Friday special -->
+          <div class="s-inner">
+            <h4>Friday</h4>
+            <div>
+              <input type="radio" name="sandwich" id="dw" value="dw" />
+              <label for="dw">Dado Wrap</label>
+            </div>
+            <div>
+              <input type="radio" name="sandwich" id="ts" value="ts" />
+              <label for="ts">Tuna Salad</label>
+            </div>
+          </div>
+        </div>
+        
+
+        <hr />
+
+        <div style="margin: 0 8px;">
+          <input type="checkbox" name="sandwich" id="gluten-free" />
+
+          <label for="gluten-free">
+            Gluten Free Bread
+            <span style="font-weight: bold; margin-left: 8px"
+              >(75&cent; extra)</span
+            >
+          </label>
+        </div>
+      </fieldset>
+
+
+      <!-- Button -->
+      <button type="submit">Place Order</button>
+    </form>
+  </body>
+</html>
